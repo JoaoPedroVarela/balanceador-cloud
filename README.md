@@ -42,7 +42,7 @@ Para acessar o servico pelo DNS `www.jp.com`, edite o arquivo `hosts` no seu com
    ```
 2. Adicionar a linha:  
    ```
-   192.168.1.100   www.jp.com
+   IP   www.jp.com
    ```
 3. Salvar o arquivo (`Ctrl + X`, `Y`, `Enter`).  
 
