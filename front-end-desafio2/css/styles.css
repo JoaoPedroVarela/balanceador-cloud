@@ -1,0 +1,102 @@
+.terminal .ballom {
+    margin: 50px;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Garante que o html e o body ocupem 100% da altura e largura da tela */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Remove a barra de rolagem */
+}
+
+/* Estilo do body */
+body {
+    background-color: #1e1e1e;
+    color: #00ff00;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Faz o terminal ocupar 100% da altura e largura da tela */
+.terminal {
+    background-color: #000000;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabeçalho do terminal */
+.terminal-header {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Botões do cabeçalho */
+.terminal-button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.terminal-button.close {
+    background-color: #ff5f56; /* Vermelho */
+}
+
+.terminal-button.minimize {
+    background-color: #ffbd2e; /* Amarelo */
+}
+
+.terminal-button.maximize {
+    background-color: #27c93f; /* Verde */
+}
+/* Título do terminal */
+.terminal-title {
+    color: #ccc;
+    font-size: 14px;
+    margin-left: auto; /* Alinha o título à direita */
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Corpo do terminal */
+.cabecalho .terminal-body {
+    flex: 1; /* Ocupa o espaço restante */
+    padding: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+}
+
+/* Texto do terminal */
+.cabecalho .terminal-text {
+    margin: 0;
+}
+
+.imagem img {
+    margin-top: 10px;
+    width: 100px; /* 50% da largura do contêiner pai */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px;
+}
+
+/* Efeito de cursor piscando */
+.terminal-text:last-child::after {
+    content: "█";
+    animation: blink 1s infinite;
+}
